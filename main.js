@@ -85,4 +85,4 @@ for (var v = 0 ; v < todos.length ; v++){
 }
 
 
-new item("Anter ibu ke pasar");
+new item("Ex: Anter ibu ke pasar");
