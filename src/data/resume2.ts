@@ -1,11 +1,11 @@
 export const experience = [
   {
     title: 'Fullstack Engineer',
-    company: 'Southeast Asian car-sharing operator',
+    company: 'Singapore-based car-sharing platform',
     dates: 'May 2022 — present',
-    where: 'Remote',
+    where: 'Remote · Singapore HQ',
     tagline:
-      'Car-sharing and fleet operations for three brands across three markets.',
+      'Car-sharing and fleet operations for three brands across three markets, from a Singapore-headquartered platform.',
     focus: ['Release management', 'Legacy modernization', 'CI/CD', 'Dependency automation'],
     bullets: [
       {

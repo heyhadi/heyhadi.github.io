@@ -6,6 +6,12 @@ export function Experience({ experience, skillGroups, education }: any) {
         <h2 className="h2">
           5+ years across car-sharing ops and national licensing.
         </h2>
+        <p className="standfirst">
+          Current role: fullstack engineer on the ops platform of a Singapore-based
+          car-sharing company — bookings, billing and fleet tooling for three brands
+          across three markets, remote from Bandung. Before that, backend work on
+          Indonesia's national business-licensing platform.
+        </p>
       </div>
       <div className="jobs">
         {experience.map((j: any) => (

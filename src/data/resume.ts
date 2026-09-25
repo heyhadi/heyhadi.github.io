@@ -8,7 +8,7 @@ export const profile = {
   github: 'https://github.com/heyhadi',
   linkedin: 'https://linkedin.com/in/heyhadi',
   summary:
-    'I am a fullstack engineer (frontend focus) in Bandung with 5+ years on production systems — most recently as the top contributor and release manager for the React + TypeScript admin platform that operations and support staff at a Southeast Asian car-sharing operator use every day. The work I own is the kind most teams put off: framework migrations, deploy pipelines, dependency automation, incident post-mortems.',
+    'I am a fullstack engineer (frontend focus) in Bandung with 5+ years on production systems — most recently as the top contributor and release manager for the React + TypeScript admin platform that operations and support staff at a Singapore-based car-sharing platform use every day. The work I own is the kind most teams put off: framework migrations, deploy pipelines, dependency automation, incident post-mortems.',
   facts: [
     { k: 'Location', v: 'Bandung, Indonesia · remote since 2022' },
     { k: 'Focus', v: 'React · Svelte · TypeScript' },
