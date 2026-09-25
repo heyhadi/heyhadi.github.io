@@ -255,8 +255,13 @@ h1 {
 }
 .flow-col-after .flow-tag { color: var(--accent); }
 .flow-col ul { list-style: none; margin: 0; padding: 0; font-size: 13.5px; line-height: 1.6; }
+.flow-col li {
+  /* Hanging indent: the ::before bullet occupies its own grid column, so a
+     wrapped line lines up with the text, not with the bullet glyph. */
+  display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 7px;
+}
 .flow-col li + li { margin-top: 4px; }
-.flow-col li::before { content: "·"; color: var(--mut); margin-right: 7px; }
+.flow-col li::before { content: "·"; color: var(--mut); }
 .flow-mid { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
 .flow-step { font-size: 11.5px; font-weight: 600; color: var(--mut); max-width: 118px; line-height: 1.4; }
 .flow-arrow { font-size: 18px; line-height: 1; color: var(--accent); }
