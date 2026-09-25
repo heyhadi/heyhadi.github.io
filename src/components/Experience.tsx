@@ -3,7 +3,7 @@ export function Experience({ experience, skillGroups, education }: any) {
     <section id="experience" className="section">
       <div className="eyebrow">Experience</div>
       <h2 className="h2">
-        4+ years across car-sharing ops and national licensing.
+        5+ years across car-sharing ops and national licensing.
       </h2>
       <div className="jobs">
         {experience.map((j: any) => (

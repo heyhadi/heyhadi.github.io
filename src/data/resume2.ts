@@ -9,7 +9,7 @@ export const experience = [
       'Top contributor + release manager for the ops admin console (React, TypeScript, Redux) — the tool for bookings, transactions, billing & cases. 3-week release train with plans, regression checklists, sign-off gates.',
       'Built booking / billing UI — filterable tables, multi-step validated forms, receipts & price breakdowns, QR payments, bulk toll charging. Wrote the spec for a cross-border driving programme.',
       'Led console modernization: UI kit major, component library major, React 16 to 18, Node 14 to 24 LTS, legacy theme removal, bundler migration spike — each with audit + regression checklist.',
-      'Authored Gitflow strategy + branch-validated dual-brand deploy-by-tag on managed hosting, replacing a manual process that caused a production misrouting.',
+      'Authored Gitflow strategy + branch-validated multi-brand deploy-by-tag on managed hosting, replacing a manual process that caused a production misrouting.',
       'Designed Dependabot pipeline (patch-only auto-merge, block list, weekly rotation): 0 to ~25 updates/month. Added Husky + lint-staged + SonarJS + a11y.',
       'Built internal AI-assisted engineering plugin: 21 skills + 10 agents over repo/platform/global conventions. Trial removed type-safety regressions. Plus release & Playwright QA automation.',
       'Wrote post-mortems (admin auth outage, deploy-webhook telemetry corruption) & led supply-chain response (npm worm, CVEs, secret removal).',
@@ -63,7 +63,7 @@ export const projects = [
     body: 'Deploys used to depend on someone remembering the right manual steps, and a misrouted production incident proved it. I wrote the web team branching strategy and built it into CI as a deploy-by-tag workflow covering every brand, so the branch and the tag decide where code goes, not a person at midnight.',
     result: 'An entire class of misrouting incidents is now structurally impossible.',
     tags: ['Gitflow', 'Hosting', 'CI'],
-    scope: 'Scope: all brands · tag-driven deploys',
+    scope: 'Scope: multi-brand · tag-driven deploys',
   },
   {
     id: 'deps',
