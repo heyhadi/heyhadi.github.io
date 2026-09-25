@@ -1,8 +1,8 @@
 export const skillGroups = [
-  { title: 'Frontend', skills: ['React', 'Svelte', 'TypeScript', 'Redux', 'React Query', 'Vue.js', 'JS ES6+', 'HTML5', 'CSS3', 'SCSS', 'Tailwind', 'Bootstrap', 'Formik'] },
-  { title: 'Build & Quality', skills: ['Vite', 'Webpack', 'Jest', 'RTL', 'Vitest', 'ESLint', 'Prettier', 'Husky', 'SonarQube'] },
-  { title: 'Backend & Data', skills: ['Go', 'C#/.NET', 'Node.js', 'Express', 'REST', 'PostgreSQL', 'MongoDB', 'Redis'] },
-  { title: 'Platform', skills: ['Git', 'Gitflow', 'CI actions', 'Managed hosting', 'Dependabot', 'AI agents', 'Playwright'] },
+  { title: 'Frontend', skills: ['React', 'Svelte', 'TypeScript', 'Redux', 'React Query', 'Tailwind', 'SCSS', 'Formik'] },
+  { title: 'Build & Quality', skills: ['Vite', 'Webpack', 'Vitest', 'Testing Library', 'ESLint', 'Husky', 'SonarQube'] },
+  { title: 'Backend & Data', skills: ['Node.js', 'Express', 'PostgreSQL', 'Go', 'C#/.NET', 'REST'] },
+  { title: 'Platform', skills: ['Git', 'Gitflow', 'GitHub Actions', 'Dependabot', 'Playwright'] },
 ];
 
 export const education = [

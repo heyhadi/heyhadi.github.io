@@ -17,7 +17,7 @@ export default function App() {
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
           </div>
-          <a className="hire" href="#contact">Available 2026</a>
+          <a className="hire" href="#contact">Open to roles</a>
         </div>
       </nav>
       <div id="top">

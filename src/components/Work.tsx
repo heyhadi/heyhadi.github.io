@@ -3,13 +3,12 @@ export function Work({ profile, projects }: any) {
     <section id="work" className="section">
       <div className="eyebrow">Selected work — {profile.location}</div>
       <h2 className="h2">
-        Six case notes from <em>internal platforms</em>.
+        Case notes from internal platforms.
       </h2>
       <p className="standfirst">
-        My platform work is internal tooling under NDA, so there are no screenshots and no
-        invented metrics — and no employer names. Each note follows the same shape: what the
-        system does, what I changed, and what changed because of it. Full names and references
-        available on request and in interviews.
+        Internal tooling under NDA, so no screenshots and no employer names — each note
+        is the same shape: what the system does, what I changed, and what changed because
+        of it. Full names and references available on request and in interviews.
       </p>
       <ol className="cases">
         {projects.map((p: any, i: number) => (

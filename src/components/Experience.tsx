@@ -3,7 +3,7 @@ export function Experience({ experience, skillGroups, education }: any) {
     <section id="experience" className="section">
       <div className="eyebrow">Experience</div>
       <h2 className="h2">
-        Five years, <em>two platforms</em>.
+        4+ years across car-sharing ops and national licensing.
       </h2>
       <div className="jobs">
         {experience.map((j: any) => (
@@ -28,7 +28,7 @@ export function Experience({ experience, skillGroups, education }: any) {
         </div>
         <div className="toolbox">
           <h3>Education</h3>
-          <p>How I got here — bootcamp first, degree earlier.</p>
+          <p>Degree first, then a bootcamp into engineering.</p>
           {education.map((e: any) => (
             <div className="toolrow" key={e.school}>
               <h4>{e.school}</h4>
@@ -36,7 +36,7 @@ export function Experience({ experience, skillGroups, education }: any) {
             </div>
           ))}
           <h3>Elsewhere</h3>
-          <p>Release notes, post-mortems, specs, and Confluence plans — ask me in an interview and I will walk you through one.</p>
+          <p>Release notes, post-mortems, and specs — ask me in an interview and I will walk you through one. This site itself is public: <a href="https://github.com/heyhadi/heyhadi.github.io" target="_blank" rel="noreferrer">source on GitHub</a>.</p>
         </div>
       </div>
     </section>

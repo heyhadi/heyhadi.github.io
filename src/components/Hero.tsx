@@ -3,12 +3,11 @@ export function Hero({ profile }: any) {
     <header className="hero">
       <div className="hero-grid">
         <div>
-          <div className="eyebrow">Frontend engineer — Bandung, Indonesia</div>
+          <div className="eyebrow">Fullstack engineer (frontend focus) — Bandung, Indonesia</div>
           <h1>
             I build interfaces that survive production.
           </h1>
           <p className="lede">{profile.summary}</p>
-          <p className="note">{profile.note}</p>
           <ul className="facts">
             {profile.facts.map((f: any) => (
               <li key={f.k}>
@@ -27,7 +26,7 @@ export function Hero({ profile }: any) {
         <aside className="aside-current" aria-label="Currently">
           <div className="aside-top">
             <span className="avail-dot" aria-hidden="true" />
-            <span>Available 2026 — open to frontend / fullstack roles</span>
+            <span>Open to roles — frontend / fullstack</span>
           </div>
           <h2>Currently</h2>
           <p>
