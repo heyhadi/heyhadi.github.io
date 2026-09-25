@@ -44,10 +44,10 @@ export const experience = [
   },
   {
     title: 'Backend Developer',
-    company: 'Digital consultancy',
+    company: 'PT Majapahit Teknologi',
     dates: 'Apr 2021 — Apr 2022',
     where: 'Jakarta · seconded to a government agency',
-    tagline: 'National business-licensing platform for Indonesia.',
+    tagline: 'OSS-RBA — national business-licensing platform for Indonesia.',
     focus: ['Node.js + Express', 'Relational schemas', 'REST APIs'],
     bullets: [
       {
