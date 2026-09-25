@@ -1,0 +1,86 @@
+export const experience = [
+  {
+    title: 'Fullstack Engineer',
+    company: 'Southeast Asian car-sharing operator',
+    meta: 'Remote · May 2022 — present',
+    tagline:
+      'Car-sharing and fleet operations for three brands across three markets.',
+    bullets: [
+      'Top contributor + release manager for the ops admin console (React, TypeScript, Redux) — the tool for bookings, transactions, billing & cases. 3-week release train with plans, regression checklists, sign-off gates.',
+      'Built booking / billing UI — filterable tables, multi-step validated forms, receipts & price breakdowns, QR payments, bulk toll charging. Wrote the spec for a cross-border driving programme.',
+      'Led console modernization: UI kit major, component library major, React 16 to 18, Node 14 to 24 LTS, legacy theme removal, bundler migration spike — each with audit + regression checklist.',
+      'Authored Gitflow strategy + branch-validated dual-brand deploy-by-tag on managed hosting, replacing a manual process that caused a production misrouting.',
+      'Designed Dependabot pipeline (patch-only auto-merge, block list, weekly rotation): 0 to ~25 updates/month. Added Husky + lint-staged + SonarJS + a11y.',
+      'Built internal AI-assisted engineering plugin: 21 skills + 10 agents over repo/platform/global conventions. Trial removed type-safety regressions. Plus release & Playwright QA automation.',
+      'Wrote post-mortems (admin auth outage, deploy-webhook telemetry corruption) & led supply-chain response (npm worm, CVEs, secret removal).',
+      'Own two Svelte + TS fleet apps (carpark, fuel card, charging lots, maintenance). Shipped solo REST services in Go and C#/.NET with BDD tests.',
+    ],
+  },
+  {
+    title: 'Backend Developer',
+    company: 'Digital consultancy',
+    meta: 'Jakarta — Apr 2021 to Apr 2022 — seconded to a government agency',
+    tagline: 'National business-licensing platform for Indonesia.',
+    bullets: [
+      'Designed relational schemas + implemented Node.js/Express backend modules for the licensing workflow.',
+      'Built & maintained Node.js REST APIs consumed by platform web clients.',
+    ],
+  },
+];
+
+export const projects = [
+  {
+    id: 'cms',
+    title: 'Running the release train for the ops console',
+    context: 'Ops admin console · React, TypeScript, Redux · internal tool',
+    body: 'This is the application operations and support staff open all day to run bookings, transactions, billing, and customer cases. I am its top contributor and release manager. Every three weeks I take a cut across two brands and three markets through release plans, QA regression checklists, and reviewer sign-off gates.',
+    result: 'A release process the team trusts instead of fears. Regressions are caught by checklist, not by customers.',
+    tags: ['React', 'TypeScript', 'Redux'],
+    scope: 'Scope: 2 brands · 3 markets · 3-week train',
+  },
+  {
+    id: 'modernization',
+    title: 'Modernizing a codebase nobody wanted to touch',
+    context: 'React 16 to 18 · Node 14 to 24 LTS · bundler migration spike',
+    body: 'The console had years of deferred upgrades: UI kit and component library majors behind, a legacy theme to remove, React and Node several majors behind. I wrote a breaking-change audit before each step and shipped each upgrade behind a regression checklist, so production never received an unverified migration.',
+    result: 'A codebase on supported majors with a repeatable audit-then-verify pattern for the next upgrade.',
+    tags: ['Migration', 'Vite', 'Node LTS'],
+    scope: 'Scope: React 16 to 18 · Node 14 to 24 LTS',
+  },
+  {
+    id: 'gitflow',
+    title: 'Replacing deploys done by memory',
+    context: 'Gitflow · managed hosting · branch-validated deploy by tag',
+    body: 'Deploys used to depend on someone remembering the right manual steps, and a misrouted production incident proved it. I wrote the web team branching strategy and built it into CI as a dual-brand deploy-by-tag workflow, so the branch and the tag decide where code goes, not a person at midnight.',
+    result: 'An entire class of misrouting incidents is now structurally impossible.',
+    tags: ['Gitflow', 'Hosting', 'CI'],
+    scope: 'Scope: dual-brand deploys · tag-driven',
+  },
+  {
+    id: 'deps',
+    title: 'Making dependency updates boring',
+    context: 'Dependabot · Husky · SonarJS · accessibility rules',
+    body: 'Two production repositories had no routine dependency maintenance. I set up Dependabot with patch-only auto-merge, a curated block list, and a weekly review rotation, plus pre-commit lint automation. The team went from zero routine updates to roughly twenty-five merged a month without heroics.',
+    result: 'Security and freshness handled by pipeline and rotation, adopted across the web repositories.',
+    tags: ['Dependabot', 'Husky', 'SonarJS'],
+    scope: 'Scope: 2 repos · 0 to ~25 merges a month',
+  },
+  {
+    id: 'ai',
+    title: 'Keeping AI-written code honest',
+    context: 'Internal AI coding plugin · 21 skills · 10 agents',
+    body: 'I packaged our conventions into a plugin with three layers — repository, platform, global — that constrains and reviews generated code across web, Android, iOS, and backend. A controlled before-and-after trial showed it removed the type-safety and validation regressions an unguided agent had introduced.',
+    result: 'AI assistance the team can accept without dreading review.',
+    tags: ['Conventions', 'Agents', 'Playwright'],
+    scope: 'Scope: 21 skills · 10 agents · 4 platforms',
+  },
+  {
+    id: 'fleet',
+    title: 'Owning fleet tooling end to end',
+    context: 'Svelte and TypeScript · Go · C# and .NET',
+    body: 'I own two fleet and dealer applications — carparks, fuel cards, case management, charging lots, vehicle maintenance — and their release notes. When a feature needed a service, I built it solo from schema to interface: a user-notes service in Go and cancellation-reason handling in C#, each with tests and its admin UI.',
+    result: 'No handoff queues. Schema, service, and interface from one person.',
+    tags: ['Svelte', 'Go', 'C#/.NET'],
+    scope: 'Scope: 2 apps owned solo · schema to interface',
+  },
+];
