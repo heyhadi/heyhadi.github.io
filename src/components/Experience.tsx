@@ -1,21 +1,44 @@
 export function Experience({ experience, skillGroups, education }: any) {
   return (
     <section id="experience" className="section">
-      <div className="eyebrow">Experience</div>
-      <h2 className="h2">
-        5+ years across car-sharing ops and national licensing.
-      </h2>
+      <div className="sec-head" data-reveal>
+        <div className="eyebrow">Experience</div>
+        <h2 className="h2">
+          5+ years across car-sharing ops and national licensing.
+        </h2>
+      </div>
       <div className="jobs">
         {experience.map((j: any) => (
-          <div className="job" key={j.company}>
-            <h3>{j.title} — {j.company}</h3>
-            <div className="meta">{j.meta}</div>
-            <p>{j.tagline}</p>
-            <ul>{j.bullets.map((b: string, i: number) => (<li key={i}>{b}</li>))}</ul>
-          </div>
+          <article className="job" key={j.company} data-reveal>
+            <div className="job-head">
+              <h3>{j.title} — {j.company}</h3>
+              <p className="job-tagline">{j.tagline}</p>
+            </div>
+            <ul className="job-points">
+              {j.bullets.map((b: any, i: number) => (
+                <li key={i}>
+                  <strong>{b.lead}</strong> {b.text}
+                </li>
+              ))}
+            </ul>
+            <aside className="job-rail">
+              <div className="rail-block">
+                <h4>Dates</h4>
+                <p>{j.dates}</p>
+              </div>
+              <div className="rail-block">
+                <h4>Where</h4>
+                <p>{j.where}</p>
+              </div>
+              <div className="rail-block">
+                <h4>Focus</h4>
+                <p>{j.focus.join(' · ')}</p>
+              </div>
+            </aside>
+          </article>
         ))}
       </div>
-      <div className="two-col">
+      <div className="two-col" data-reveal>
         <div className="toolbox">
           <h3>Toolbox</h3>
           <p>What I reach for without thinking — grouped by where it runs.</p>

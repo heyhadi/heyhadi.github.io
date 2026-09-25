@@ -25,3 +25,12 @@ export const competencies = [
   'Incident post-mortems',
   'Technical specifications',
 ];
+
+// Scannable facts for the strip directly under the hero. Every number here is
+// repeated in the case notes or experience bullets — keep them in sync.
+export const stats = [
+  { value: '3-week', label: 'release train, planned and signed off' },
+  { value: '3', label: 'markets running the ops platform' },
+  { value: '0 → 25', label: 'dependency merges a month, from zero' },
+  { value: '21 + 10', label: 'AI plugin skills and agents, 4 platforms' },
+];

@@ -5,7 +5,7 @@ export function Hero({ profile }: any) {
         <div>
           <div className="eyebrow">Fullstack engineer (frontend focus) — Bandung, Indonesia</div>
           <h1>
-            I build interfaces that survive production.
+            I build interfaces that <em>survive production</em>.
           </h1>
           <p className="lede">{profile.summary}</p>
           <ul className="facts">
