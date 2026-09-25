@@ -30,7 +30,7 @@ export const competencies = [
 // repeated in the case notes or experience bullets — keep them in sync.
 export const stats = [
   { value: '3-week', label: 'release train, planned and signed off' },
-  { value: '3', label: 'markets running the ops platform' },
-  { value: '0 → 25', label: 'dependency merges a month, from zero' },
-  { value: '21 + 10', label: 'AI plugin skills and agents, 4 platforms' },
+  { value: '16 → 18', label: 'React majors shipped; Node 14 → 24 LTS behind audits' },
+  { value: '0 → 25', label: 'dependency updates auto-merged monthly, from zero' },
+  { value: '4', label: 'platforms with plugin-constrained AI codegen' },
 ];
