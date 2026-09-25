@@ -46,8 +46,8 @@ export const experience = [
     title: 'Backend Developer',
     company: 'PT Majapahit Teknologi',
     dates: 'Apr 2021 — Apr 2022',
-    where: 'Jakarta · seconded to a government agency',
-    tagline: 'OSS-RBA — national business-licensing platform for Indonesia.',
+    where: 'Jakarta · seconded to BKPM',
+    tagline: 'OSS-RBA — national business-licensing platform for Indonesia, built at BKPM.',
     focus: ['Node.js + Express', 'Relational schemas', 'REST APIs'],
     bullets: [
       {

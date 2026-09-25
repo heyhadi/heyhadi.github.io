@@ -9,8 +9,9 @@ export function Experience({ experience, skillGroups, education }: any) {
         <p className="standfirst">
           Current role: fullstack engineer on the ops platform of a Singapore-based
           car-sharing company — bookings, billing and fleet tooling for three brands
-          across three markets, remote from Bandung. Before that, backend work on
-          Indonesia's national business-licensing platform.
+          across three markets, remote from Bandung. Before that, backend work at BKPM,
+          Indonesia's Investment Coordinating Board, on OSS-RBA — the national
+          business-licensing platform.
         </p>
       </div>
       <div className="jobs">
