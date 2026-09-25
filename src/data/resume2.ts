@@ -9,7 +9,7 @@ export const experience = [
     focus: ['Release management', 'Legacy modernization', 'CI/CD', 'Dependency automation'],
     bullets: [
       {
-        lead: 'Top contributor + release manager',
+        lead: 'Top contributor and release manager',
         text: 'for the ops admin console (React, TypeScript, Redux) — bookings, transactions, billing, cases. Three-week release train with plans, regression checklists, sign-off gates.',
       },
       {
