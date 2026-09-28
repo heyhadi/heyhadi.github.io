@@ -10,7 +10,7 @@ import { Contact } from './components/Contact';
 
 export default function App() {
   // Progressive-enhancement scroll reveals: CSS only hides [data-reveal] once
-  // main.tsx has put .js on <html>, so the page is fully readable without this.
+  // index.html has put .js on <html>, so the page is fully readable without this.
   useEffect(() => {
     const targets = Array.from(document.querySelectorAll('[data-reveal]'));
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
