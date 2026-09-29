@@ -32,7 +32,6 @@ export function renderJsonLd(): string {
       description: profile.summary,
       url: SITE,
       email: `mailto:${profile.email}`,
-      telephone: profile.phone,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Bandung',

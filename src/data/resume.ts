@@ -3,7 +3,6 @@ export const profile = {
   role: 'Frontend Engineer',
   altRole: 'Fullstack Engineer',
   location: 'Bandung, Indonesia',
-  phone: '+62 859 1069 79509',
   email: 'hadi.munawirul@gmail.com',
   github: 'https://github.com/heyhadi',
   linkedin: 'https://linkedin.com/in/heyhadi',
