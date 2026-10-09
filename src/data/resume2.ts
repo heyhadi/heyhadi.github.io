@@ -1,6 +1,6 @@
 export const experience = [
   {
-    title: 'Software Engineer II (Fullstack)',
+    title: 'Fullstack Engineer',
     company: 'GetGo',
     dates: 'May 2022 — present',
     where: 'Remote · Singapore HQ',
