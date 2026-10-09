@@ -1,19 +1,18 @@
 export const profile = {
   name: 'Munawirul Hadi',
-  role: 'Frontend Engineer',
-  altRole: 'Fullstack Engineer',
+  role: 'Senior Frontend Engineer',
+  company: 'GetGo',
+  availability: 'Open to senior frontend roles — remote or relocation',
+  relocation: 'Singapore, Australia, Japan, Netherlands, or Germany',
+  notice: '1 month',
+  site: 'https://heyhadi.github.io/',
+  cv: '/munawirul-hadi-cv.pdf',
   location: 'Bandung, Indonesia',
   email: 'hadi.munawirul@gmail.com',
   github: 'https://github.com/heyhadi',
   linkedin: 'https://linkedin.com/in/heyhadi',
   summary:
-    'I have 5+ years on production systems — most recently release manager for the React + TypeScript admin platform that operations and support staff at a Singapore-based car-sharing platform use every day. The work I own is the kind most teams put off: framework migrations, deploy pipelines, dependency automation, incident post-mortems.',
-  facts: [
-    { k: 'Location', v: 'Bandung, Indonesia · remote since 2022' },
-    { k: 'Focus', v: 'React · Svelte · TypeScript' },
-    { k: 'Scope', v: 'Three brands · three markets' },
-    { k: 'Contact', v: 'hadi.munawirul@gmail.com' },
-  ],
+    'Frontend engineer, 5+ years in production. At GetGo, a Singapore car-sharing platform, I build the customer-facing web app and am the top contributor and release manager for the React + TypeScript ops console. I lead code review for the web team, mentor new engineers, and own the work most teams put off: migrations, deploy pipelines, incident post-mortems.',
 };
 
 export const competencies = [

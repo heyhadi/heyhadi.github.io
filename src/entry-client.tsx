@@ -9,11 +9,12 @@ import './styles.css';
 // targets stay hidden only when the bundle really is running.
 document.documentElement.classList.add('js');
 
-// Hydrates the markup prerendered by src/entry-server.tsx — the same <App /> tree,
-// so the two entries must never render different output.
+// Hydrates the markup prerendered by scripts/prerender.mjs — the same <Site /> tree,
+// so the server and client must never render different output. Navigation,
+// route re-renders, and reveal re-arming live in the App effects.
 hydrateRoot(
   document.getElementById('root')!,
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
