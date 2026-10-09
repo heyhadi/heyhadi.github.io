@@ -1,5 +1,4 @@
 import { ReleaseTrain } from './ReleaseTrain';
-import { MigrationPath } from './MigrationPath';
 import { DependabotFlow } from './DependabotFlow';
 
 /**
@@ -9,7 +8,6 @@ import { DependabotFlow } from './DependabotFlow';
  */
 export function Visual({ kind }: { kind?: string }) {
   if (kind === 'release-train') return <ReleaseTrain />;
-  if (kind === 'migration') return <MigrationPath />;
   if (kind === 'dependabot') return <DependabotFlow />;
   return null;
 }

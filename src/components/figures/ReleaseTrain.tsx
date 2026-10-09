@@ -45,7 +45,7 @@ export function ReleaseTrain() {
     <figure className="figure figure-train">
       <div className="fig-head">
         <span className="fig-title">One release cycle</span>
-        <span className="fig-meta">3 weeks · every brand, every market</span>
+        <span className="fig-meta">3 weeks · two brands, three markets</span>
       </div>
 
       <ol className="train">

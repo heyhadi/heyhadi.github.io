@@ -3,22 +3,15 @@ export function Hero({ profile }: any) {
     <header className="hero">
       <div className="hero-grid">
         <div>
-          <div className="eyebrow">Fullstack engineer (frontend focus) — Bandung, Indonesia</div>
+          <div className="eyebrow">{profile.role} — React · TypeScript — Bandung, Indonesia</div>
           <h1>
             I build interfaces that <em>survive production</em>.
           </h1>
           <p className="lede">{profile.summary}</p>
-          <ul className="facts">
-            {profile.facts.map((f: any) => (
-              <li key={f.k}>
-                <b>{f.k}</b>
-                <span>{f.v}</span>
-              </li>
-            ))}
-          </ul>
           <div className="cta-row">
-            <a href="#work">Read the case notes</a>
+            <a href="/#work">Read the case notes</a>
             <a href={`mailto:${profile.email}`}>Email me</a>
+            <a href={profile.cv} download>Download CV (PDF)</a>
             <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
@@ -26,24 +19,21 @@ export function Hero({ profile }: any) {
         <aside className="aside-current" aria-label="Currently">
           <div className="aside-top">
             <span className="avail-dot" aria-hidden="true" />
-            <span>Open to roles — frontend / fullstack</span>
+            <span>{profile.availability}</span>
           </div>
           <h2>Currently</h2>
           <p>
-            Frontend engineer building admin interfaces in React, Svelte, and TypeScript —
-            booking and billing flows plus fleet tooling, with the odd Go or C# service
-            when a feature needs one.
-          </p>
-          <p>
-            Why teams trust my UI: I also run the release train — three-week cuts across
-            three brands and three markets, behind checklists and sign-off gates.
+            Building {profile.company}'s web apps — from the customer-facing app to
+            the ops console behind it — and running the console's three-week release
+            train.
           </p>
           <dl className="aside-facts">
+            <div><dt>Looking for</dt><dd>Senior frontend / frontend-leaning fullstack, full-time</dd></div>
+            <div><dt>Work setup</dt><dd>Remote, or relocate: {profile.relocation}</dd></div>
+            <div><dt>Notice</dt><dd>{profile.notice}</dd></div>
             <div><dt>Timezone</dt><dd>WIB (UTC+7) · overlaps SGT / MYT / AEST</dd></div>
-            <div><dt>Reply</dt><dd>Email first, same-day most days</dd></div>
-            <div><dt>Elsewhere</dt><dd>GitHub · LinkedIn</dd></div>
           </dl>
-          <a className="aside-cta" href="#contact">Skip to contact ↓</a>
+          <a className="aside-cta" href="/#contact">Skip to contact ↓</a>
         </aside>
       </div>
     </header>
