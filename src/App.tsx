@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { profile, stats } from './data/resume';
-import { experience, projects, posts } from './data/resume2';
+import { experience, projects, openSource, posts } from './data/resume2';
 import { skillGroups, education } from './data/resume3';
 import { matchRoute, normalizePath, type Route } from './lib/route';
 import { Nav, Footer } from './components/Chrome';
 import { Hero } from './components/Hero';
 import { StatStrip } from './components/StatStrip';
 import { Work } from './components/Work';
+import { OpenSource } from './components/OpenSource';
 import { Experience } from './components/Experience';
 import { BlogIndex } from './components/BlogIndex';
 import { BlogPostPage } from './components/BlogPost';
@@ -88,6 +89,7 @@ export function HomePage() {
       </div>
       <StatStrip stats={stats} />
       <Work projects={projects} />
+      <OpenSource items={openSource} />
       <Experience
         experience={experience}
         projects={projects}

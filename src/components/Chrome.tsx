@@ -12,6 +12,7 @@ export function Nav({ home }: { home: boolean }) {
         </a>
         <div className="links">
           <a href={h('#work')}>Work</a>
+          <a href={h('#projects')}>Projects</a>
           <a href={h('#experience')}>Experience</a>
           <a href="/blog/">Blog</a>
           <a href={h('#contact')}>Contact</a>

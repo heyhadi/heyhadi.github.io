@@ -10,6 +10,7 @@ export function Hero({ profile }: any) {
           <p className="lede">{profile.summary}</p>
           <div className="cta-row">
             <a href="/#work">Read the case notes</a>
+            <a href="/#projects">Open-source projects</a>
             <a href={`mailto:${profile.email}`}>Email me</a>
             <a href={profile.cv} download>Download CV (PDF)</a>
             <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>

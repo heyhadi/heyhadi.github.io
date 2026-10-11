@@ -88,6 +88,68 @@ export const projects = [
   },
 ];
 
+// Public projects: every point restates the project's own README, and nothing
+// carries a version number, so the cards can't drift as releases ship.
+export const openSource = [
+  {
+    name: 'form-keeper',
+    kind: 'Chrome extension',
+    pitch: 'Reload without losing your forms.',
+    points: [
+      'Restores text, selects, files and images into React, Vue and Svelte state, not just the screen.',
+      'Handles custom dropdowns and date pickers: react-select, MUI, Ant Design, Radix, react-datepicker.',
+      'Local-only storage, on dev hosts by default; passwords are never saved.',
+    ],
+    stack: 'TypeScript · WXT · Playwright',
+    links: [
+      { label: 'Website', href: 'https://heyhadi.github.io/form-keeper/' },
+      { label: 'Source', href: 'https://github.com/heyhadi/form-keeper' },
+    ],
+  },
+  {
+    name: 'upgrade-scout',
+    kind: 'CLI · npm',
+    pitch: 'See which dependencies are a major behind, and what in your code breaks when you upgrade.',
+    points: [
+      'One command: majors behind, Node end-of-life, and rule-pack findings per package.',
+      'React 18 pack with type-checked rules, such as React.FC components reading undeclared children.',
+      'Finds imports through default, namespace, aliased and require bindings.',
+    ],
+    stack: 'TypeScript · ts-morph · Vitest',
+    links: [
+      { label: 'npm', href: 'https://www.npmjs.com/package/upgrade-scout' },
+      { label: 'Source', href: 'https://github.com/heyhadi/upgrade-scout' },
+    ],
+  },
+  {
+    name: 'depbot-policy',
+    kind: 'CLI · npm',
+    pitch: 'One policy file → dependabot.yml, patch-only auto-merge, a block list, and a review rotation.',
+    points: [
+      'Safe updates merge themselves; majors and risky packages go to this week’s reviewer.',
+      'The rotation is worked out from the pull request’s date alone, so nothing is stored.',
+      'Optional: describe a policy in plain English and have a model write it.',
+    ],
+    stack: 'TypeScript · GitHub Actions',
+    links: [
+      { label: 'npm', href: 'https://www.npmjs.com/package/depbot-policy' },
+      { label: 'Source', href: 'https://github.com/heyhadi/depbot-policy' },
+    ],
+  },
+  {
+    name: 'Wird',
+    kind: 'React Native app',
+    pitch: 'A Quran app for reading, listening and memorising, in Indonesian and English.',
+    points: [
+      'Tajweed colours you can tap, mushaf page mode, and word-by-word meaning.',
+      '27 reciters with offline downloads, a Khatam planner and Hifz practice.',
+      'Text follows the phone’s font size, with limits so layouts hold.',
+    ],
+    stack: 'React Native · Expo · TypeScript',
+    links: [{ label: 'Source', href: 'https://github.com/heyhadi/wird' }],
+  },
+];
+
 export const posts = [
   {
     slug: 'upgrading-react-16-to-18',
