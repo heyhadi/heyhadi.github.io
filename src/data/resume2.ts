@@ -146,7 +146,11 @@ export const openSource = [
       'Text follows the phone’s font size, with limits so layouts hold.',
     ],
     stack: 'React Native · Expo · TypeScript',
-    links: [{ label: 'Source', href: 'https://github.com/heyhadi/wird' }],
+    links: [
+      { label: 'Website', href: 'https://heyhadi.github.io/wird/' },
+      { label: 'Android preview', href: 'https://github.com/heyhadi/wird/releases/latest' },
+      { label: 'Source', href: 'https://github.com/heyhadi/wird' },
+    ],
   },
 ];
 
