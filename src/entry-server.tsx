@@ -27,6 +27,39 @@ export interface HeadData {
   canonical: string;
   jsonld: string;
   robots: '' | 'noindex';
+  /** Open Graph + Twitter Card tags, derived from the fields above. */
+  social: string;
+}
+
+const OG_IMAGE = `${SITE}og-image.png`;
+
+function escAttr(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+/**
+ * Social share card tags. The image is site-wide; url/title/description
+ * follow the route so shares of blog posts unfurl correctly too.
+ */
+function socialTags(title: string, description: string, canonical: string): string {
+  const tags = [
+    '<meta property="og:type" content="website" />',
+    '<meta property="og:site_name" content="Munawirul Hadi" />',
+    `<meta property="og:title" content="${escAttr(title)}" />`,
+    `<meta property="og:description" content="${escAttr(description)}" />`,
+    `<meta property="og:image" content="${OG_IMAGE}" />`,
+    '<meta property="og:image:width" content="1200" />',
+    '<meta property="og:image:height" content="630" />',
+    `<meta property="og:image:alt" content="${escAttr(title)}" />`,
+    '<meta name="twitter:card" content="summary_large_image" />',
+    `<meta name="twitter:title" content="${escAttr(title)}" />`,
+    `<meta name="twitter:description" content="${escAttr(description)}" />`,
+    `<meta name="twitter:image" content="${OG_IMAGE}" />`,
+  ];
+  if (canonical) {
+    tags.splice(2, 0, `<meta property="og:url" content="${canonical}" />`);
+  }
+  return tags.join('\n    ');
 }
 
 function jsonldScript(graph: unknown): string {
@@ -73,8 +106,16 @@ function homeJsonLd(): string {
 const BLOG_DESCRIPTION =
   'Short posts drawn from production work. No internal details — just the patterns that survived contact with production.';
 
-/** Per-route <head>: title, description, canonical, and structured data. */
+/** Per-route <head>: title, description, canonical, structured data, social tags. */
 export function renderHead(route: Route = { kind: 'home' }): HeadData {
+  const base = renderHeadBase(route);
+  return {
+    ...base,
+    social: socialTags(base.title, base.description, base.canonical),
+  };
+}
+
+function renderHeadBase(route: Route = { kind: 'home' }): Omit<HeadData, 'social'> {
   if (route.kind === 'post') {
     const post = findPost(route.slug)!;
     const canonical = urlFor(route);
