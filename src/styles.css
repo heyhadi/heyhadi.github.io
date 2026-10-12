@@ -391,8 +391,22 @@ footer { border-top: 1px solid var(--line); margin-top: 48px; background: var(--
   .notfound { padding: 56px 20px; }
   .foot { flex-direction: column; gap: 4px; padding: 20px; }
 }
+.nav-toggle { display: none; }
 @media (max-width: 640px) {
-  .links { display: none; }
+  .nav-toggle {
+    display: inline-block;
+    background: none; border: 0; cursor: pointer;
+    font: 600 14px/1 Inter, system-ui, sans-serif;
+    color: var(--accent); padding: 10px 4px; white-space: nowrap;
+  }
+  .links {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid var(--line);
+    flex-direction: column; gap: 0; padding: 8px 32px 20px;
+  }
+  .links.open { display: flex; }
+  .links a { padding: 13px 0; border-top: 1px solid #f1f3f5; }
 }
 @media (max-width: 560px) {
   .stats-inner { grid-template-columns: 1fr; }

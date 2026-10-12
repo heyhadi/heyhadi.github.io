@@ -25,6 +25,7 @@ const TITLE_SLOT = '<!--app-title-->';
 const DESC_SLOT = '<!--app-description-->';
 const CANONICAL_SLOT = '<!--app-canonical-->';
 const ROBOTS_SLOT = '<!--app-robots-->';
+const SOCIAL_SLOT = '<!--app-social-->';
 
 const SITE = 'https://heyhadi.github.io/';
 
@@ -38,7 +39,7 @@ const { render, renderHead, posts } = await import(pathToFileURL(serverEntry).hr
 const shell = await readFile(shellPath, 'utf8');
 
 // Fail loudly rather than silently shipping a client-only page again.
-for (const slot of [HTML_SLOT, JSONLD_SLOT, TITLE_SLOT, DESC_SLOT, CANONICAL_SLOT, ROBOTS_SLOT]) {
+for (const slot of [HTML_SLOT, JSONLD_SLOT, TITLE_SLOT, DESC_SLOT, CANONICAL_SLOT, ROBOTS_SLOT, SOCIAL_SLOT]) {
   if (!shell.includes(slot)) {
     throw new Error(`prerender: ${slot} missing from dist/index.html — check the build order.`);
   }
@@ -48,7 +49,7 @@ if (!SHELL_TITLE.test(shell)) {
 }
 
 /** index.html → the fully-tagged static page for one route. */
-function pageFor(route, title, description, canonical, robots, jsonld, markup) {
+function pageFor(route, title, description, canonical, robots, social, jsonld, markup) {
   const html = shell
     .replace(SHELL_TITLE, '')
     .replace(JSONLD_SLOT, jsonld)
@@ -59,10 +60,11 @@ function pageFor(route, title, description, canonical, robots, jsonld, markup) {
     )
     .replace(CANONICAL_SLOT, canonical ? `<link rel="canonical" href="${canonical}" />` : '')
     .replace(ROBOTS_SLOT, robots ? `<meta name="robots" content="${robots}" />` : '')
+    .replace(SOCIAL_SLOT, social)
     .replace(HTML_SLOT, markup);
 
   // Each slot appears exactly once, so anything left over means the substitution missed.
-  for (const slot of [HTML_SLOT, JSONLD_SLOT, TITLE_SLOT, DESC_SLOT, CANONICAL_SLOT, ROBOTS_SLOT]) {
+  for (const slot of [HTML_SLOT, JSONLD_SLOT, TITLE_SLOT, DESC_SLOT, CANONICAL_SLOT, ROBOTS_SLOT, SOCIAL_SLOT]) {
     if (html.includes(slot)) {
       throw new Error(`prerender: ${slot} survived substitution on ${route.kind}.`);
     }
@@ -104,6 +106,7 @@ for (const { route, out } of routes) {
     head.description,
     head.canonical,
     head.robots,
+    head.social,
     head.jsonld,
     markup,
   );
